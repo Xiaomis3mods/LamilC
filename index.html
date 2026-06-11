@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LamilC - Expertos en climatización y refrigeración en Cuba. Reparación, mantenimiento, montaje de aires acondicionados. Servicio profesional con garantía.">
-    <meta name="keywords" content="climatización, refrigeración, aire acondicionado, reparación AC, mantenimiento, montaje, Cuba, LamilC">
+    <meta name="description" content="LamilC - Expertos en climatización y refrigeración en Cuba. Reparación, mantenimiento, montaje de aires acondicionados. Instalación de paneles solares. Servicio profesional con garantía.">
+    <meta name="keywords" content="climatización, refrigeración, aire acondicionado, paneles solares, inversores, reparación AC, mantenimiento, montaje, Cuba, LamilC">
     <meta name="author" content="LamilC">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lamilc.com/">
-    <meta property="og:title" content="LamilC - Expertos en Climatización">
-    <meta property="og:description" content="Soluciones profesionales en climatización y refrigeración. Tu confort es nuestra prioridad.">
+    <meta property="og:title" content="LamilC - Climatizando tu vida">
+    <meta property="og:description" content="Soluciones profesionales en climatización y energía solar. Climatizando tu vida.">
     <meta property="og:image" content="https://github.com/Xiaomis3mods/LamilC/blob/a5a7f45adb930d8f95b7afe6fff2a6c1c21c3038/Screenshot_20260610_170930_Instagram.jpg?raw=true">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lamilc.com/">
-    <meta property="twitter:title" content="LamilC - Expertos en Climatización">
-    <meta property="twitter:description" content="Soluciones profesionales en climatización y refrigeración. Tu confort es nuestra prioridad.">
+    <meta property="twitter:title" content="LamilC - Climatizando tu vida">
+    <meta property="twitter:description" content="Soluciones profesionales en climatización y energía solar. Climatizando tu vida.">
     <meta property="twitter:image" content="https://github.com/Xiaomis3mods/LamilC/blob/a5a7f45adb930d8f95b7afe6fff2a6c1c21c3038/Screenshot_20260610_170930_Instagram.jpg?raw=true">
 
-    <title>LamilC - Expertos en Climatización y Refrigeración | Servicio Profesional</title>
+    <title>LamilC - Expertos en Climatización y Energía Solar | Servicio Profesional</title>
     
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "LamilC",
-      "description": "Expertos en climatización y refrigeración",
+      "description": "Expertos en climatización y energía solar",
       "url": "https://lamilc.com",
       "telephone": "+5354018202",
       "address": {
@@ -42,12 +42,13 @@
         "addressCountry": "CU"
       },
       "sameAs": [
-        "https://www.instagram.com/lamilc22/"
+        "https://www.instagram.com/lamilc22/",
+        "https://www.facebook.com/lamilc.climatizacion"
       ]
     }
     </script>
-    
-    <style>        * {
+        <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -57,7 +58,8 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
+            /* Fondo frío con degradado azul claro a blanco */
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
             overflow-x: hidden;
         }
 
@@ -94,9 +96,14 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
-            to {
-                opacity: 1;
-                transform: translateX(0);            }
+            to {                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .animate-on-scroll {
@@ -116,9 +123,13 @@
             animation: fadeIn 1s ease-out forwards;
         }
 
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
         /* Header */
         header {
-            background-color: rgba(0, 0, 139, 0.95);
+            background-color: rgba(0, 0, 139, 0.95); /* Azul oscuro con transparencia */
             backdrop-filter: blur(10px);
             padding: 0.8rem 0;
             position: fixed;
@@ -134,8 +145,7 @@
             background-color: rgba(0, 0, 139, 0.98);
         }
 
-        .container {
-            width: 90%;
+        .container {            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
@@ -184,8 +194,7 @@
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
+            bottom: -5px;            left: 0;
             width: 0;
             height: 2px;
             background-color: #ffcc00;
@@ -234,7 +243,6 @@
             text-align: center;
             color: white;
         }
-
         .hero::before {
             content: "";
             position: absolute;
@@ -243,7 +251,8 @@
             width: 100%;
             height: 100%;
             background-image: url('https://github.com/Xiaomis3mods/LamilC/blob/a5a7f45adb930d8f95b7afe6fff2a6c1c21c3038/Screenshot_20260610_170930_Instagram.jpg?raw=true');
-            background-size: cover;            background-position: center;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             z-index: -1;
             filter: brightness(0.7);
@@ -265,39 +274,44 @@
 
         .btn {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 12px 30px; /* Ajuste de padding */
             color: #000;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px; /* Bordes redondeados */
             font-weight: 500;
             transition: all 0.3s ease;
-            border: none;
+            border: 2px solid transparent; /* Borde transparente inicial */
             cursor: pointer;
             font-size: 0.95rem;
             margin: 0.4rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
         }
 
-        .btn-hero-blue {
-            background-color: #00008B;
+        .btn:hover {
+            transform: translateY(-3px); /* Elevación al pasar el mouse */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+        }
+
+        .btn-hero-blue {            background-color: #00008B;
             color: white;
+            border-color: #00008B; /* Mismo color de borde */
         }
 
         .btn-hero-blue:hover {
             background-color: #000069;
             color: #e6e6e6;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 139, 0.4);
+            border-color: #000069; /* Borde cambia también */
         }
 
         .btn-hero-white {
             background-color: white;
             color: #00008B;
+            border-color: white; /* Borde blanco */
         }
         .btn-hero-white:hover {
             background-color: #f0f0f0;
             color: #00005a;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+            border-color: #f0f0f0; /* Borde cambia con el fondo */
         }
 
         /* Secciones */
@@ -327,8 +341,7 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             text-align: center;
-            margin-bottom: 2rem;
-        }
+            margin-bottom: 2rem;        }
 
         .stat-item {
             transition: transform 0.3s ease;
@@ -341,7 +354,8 @@
         .stat-item h3 {
             font-size: 2.2rem;
             color: #000;
-            margin-bottom: 0.3rem;        }
+            margin-bottom: 0.3rem;
+        }
 
         .stat-item p {
             font-size: 0.95rem;
@@ -362,6 +376,7 @@
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            border-top: 4px solid #00008B; /* Línea superior azul */
         }
 
         .service-card:hover {
@@ -375,7 +390,6 @@
             margin-bottom: 0.8rem;
             transition: transform 0.3s ease;
         }
-
         .service-card:hover i {
             transform: scale(1.1);
         }
@@ -425,8 +439,7 @@
             color: #666;
         }
 
-        .features-list {
-            list-style: none;
+        .features-list {            list-style: none;
             margin-top: 1rem;
         }
 
@@ -456,12 +469,13 @@
             text-align: center;
             padding: 1.2rem;
             transition: all 0.3s ease;
+            border-radius: 8px; /* Bordes levemente redondeados */
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
         }
 
         .why-us-item:hover {
             transform: translateY(-5px);
             background-color: rgba(0, 0, 139, 0.05);
-            border-radius: 10px;
         }
 
         .why-us-item i {
@@ -474,7 +488,6 @@
         .why-us-item:hover i {
             transform: scale(1.15);
         }
-
         .why-us-item h3 {
             font-size: 1.2rem;
             margin-bottom: 0.4rem;
@@ -488,7 +501,8 @@
 
         /* Contacto */
         .contact-grid {
-            display: grid;            grid-template-columns: 1fr 1fr;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
@@ -523,8 +537,7 @@
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            display: grid;            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
@@ -571,10 +584,9 @@
         form select,
         form textarea {
             width: 100%;
-            padding: 8px;
+            padding: 10px; /* Padding ajustado */
             border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
+            border-radius: 5px;            font-family: 'Poppins', sans-serif;
             transition: all 0.3s ease;
         }
 
@@ -586,7 +598,8 @@
             box-shadow: 0 0 5px rgba(0, 0, 139, 0.3);
         }
 
-        form textarea {            resize: vertical;
+        form textarea {
+            resize: vertical;
             min-height: 100px;
         }
 
@@ -623,7 +636,6 @@
                 width: 100%;
                 text-align: center;
             }
-
             .mobile-menu-btn {
                 display: block;
             }
@@ -635,7 +647,8 @@
             .stats,
             .services-grid,
             .why-us-grid,
-            .footer-content {                grid-template-columns: 1fr;
+            .footer-content {
+                grid-template-columns: 1fr;
             }
 
             .contact-info {
@@ -671,8 +684,7 @@
                 <a href="#servicios">Servicios</a>
                 <a href="#instagram">Instagram</a>
                 <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contactar</a>
-            </div>
+                <a href="#contacto">Contactar</a>            </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -684,7 +696,9 @@
     <section id="inicio">
         <div class="hero">
             <div class="hero-content">
-                <p>Tu confort es nuestra prioridad</p>                <div style="margin-top: 1.5rem;">
+                <!-- Título cambiado -->
+                <p>Climatizando tu vida</p>
+                <div style="margin-top: 1.5rem;">
                     <a href="https://wa.me/5354018202?text=Hola%20LamilC%2C%20me%20interesa%20conocer%20sus%20servicios" class="btn btn-hero-blue">📱 Escríbenos</a>
                     <a href="#servicios" class="btn btn-hero-white">Ver servicios</a>
                 </div>
@@ -692,7 +706,7 @@
         </div>
     </section>
 
-    <section id="stats" class="stats-section animate-on-scroll">
+    <section id="stats" class="stats-section animate-on-scroll floating">
         <div class="container">
             <div class="stats">
                 <div class="stat-item">
@@ -704,7 +718,7 @@
                     <p>Años de Experiencia</p>
                 </div>
                 <div class="stat-item">
-                    <h3>6</h3>
+                    <h3>7</h3> <!-- Actualizado -->
                     <p>Servicios Especializados</p>
                 </div>
                 <div class="stat-item">
@@ -719,8 +733,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Nuestros Servicios</h2>
-                <p>Soluciones completas en climatización</p>
-                <p>Ofrecemos un servicio integral para mantener tus equipos de climatización funcionando al máximo rendimiento.</p>
+                <p>Soluciones completas en climatización y energía solar</p>                <p>Ofrecemos un servicio integral para mantener tus equipos de climatización y generar tu propia energía.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -733,7 +746,8 @@
                     <h3>Mantenimiento</h3>
                     <p>Planes de mantenimiento preventivo y correctivo para alargar la vida útil de tus equipos y asegurar su óptimo funcionamiento.</p>
                 </div>
-                <div class="service-card">                    <i class="fas fa-snowflake"></i>
+                <div class="service-card">
+                    <i class="fas fa-snowflake"></i>
                     <h3>Montaje</h3>
                     <p>Montaje profesional de equipos de aire acondicionado en hogares, oficinas y comercios. Instalación limpia y eficiente.</p>
                 </div>
@@ -752,6 +766,12 @@
                     <h3>Instalación Eléctrica</h3>
                     <p>Instalaciones eléctricas especializadas para climatización. Circuitos dedicados, protecciones y conexiones seguras.</p>
                 </div>
+                <!-- Nuevo servicio -->
+                <div class="service-card">
+                    <i class="fas fa-solar-panel"></i>
+                    <h3>Instalación de Inversores y Paneles Solares</h3>
+                    <p>Diseño, suministro e instalación llave en mano de sistemas de energía solar fotovoltaica para hogares y negocios.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -762,8 +782,7 @@
                 <h2>Síguenos en Instagram</h2>
                 <p>Conoce nuestros últimos trabajos y proyectos</p>
             </div>
-            <div class="instagram-content">
-                <img src="https://raw.githubusercontent.com/Xiaomis3mods/Web/03ce81a84ad54811ac72715bedf2250ee9aac180/Screenshot_20260610_085849_Instagram.jpg" alt="Feed de Instagram de LamilC mostrando trabajos de climatización">
+            <div class="instagram-content">                <img src="https://raw.githubusercontent.com/Xiaomis3mods/Web/03ce81a84ad54811ac72715bedf2250ee9aac180/Screenshot_20260610_085849_Instagram.jpg" alt="Feed de Instagram de LamilC mostrando trabajos de climatización">
                 <p><a href="https://www.instagram.com/lamilc22/" target="_blank" rel="noopener noreferrer">@lamilc22 - ¡Síguenos en Instagram!</a></p>
                 <a href="https://www.instagram.com/lamilc22/" class="btn btn-hero-blue" target="_blank" rel="noopener noreferrer">Ver más en Instagram</a>
             </div>
@@ -774,15 +793,16 @@
         <div class="container">
             <div class="section-title">
                 <h2>Sobre Nosotros</h2>
-                <p>LamilC: Tu aliado en climatización profesional</p>
+                <p>LamilC: Tu aliado en climatización profesional y energía solar</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Somos una empresa especializada en soluciones de climatización con años de experiencia en el sector. Nuestro equipo de técnicos certificados garantiza un servicio de primera calidad, siempre priorizando la satisfacción del cliente.</p>
+                    <p>Somos una empresa especializada en soluciones de climatización y energía solar con años de experiencia en el sector. Nuestro equipo de técnicos certificados garantiza un servicio de primera calidad, siempre priorizando la satisfacción del cliente.</p>
                     <ul class="features-list">
                         <li><i class="fas fa-check-circle"></i> Técnicos Certificados</li>
                         <li><i class="fas fa-tag"></i> Precios Competitivos</li>
-                        <li><i class="fas fa-shield-alt"></i> Garantía en Trabajos</li>                        <li><i class="fas fa-handshake"></i> Atención Personalizada</li>
+                        <li><i class="fas fa-shield-alt"></i> Garantía en Trabajos</li>
+                        <li><i class="fas fa-handshake"></i> Atención Personalizada</li>
                     </ul>
                     <a href="https://wa.me/5354018202?text=Hola%20LamilC%2C%20quiero%20más%20información" class="btn btn-hero-blue" style="margin-top: 1rem;">Contáctanos</a>
                 </div>
@@ -811,12 +831,11 @@
                 <div class="why-us-item">
                     <i class="fas fa-dollar-sign"></i>
                     <h3>Precios Justos</h3>
-                    <p>Ofrecemos tarifas competitivas sin comprometer la calidad del servicio ni los materiales.</p>
-                </div>
+                    <p>Ofrecemos tarifas competitivas sin comprometer la calidad del servicio ni los materiales.</p>                </div>
                 <div class="why-us-item">
                     <i class="fas fa-user-hard-hat"></i>
                     <h3>Profesionales</h3>
-                    <p>Equipo de técnicos certificados con amplia experiencia en climatización.</p>
+                    <p>Equipo de técnicos certificados con amplia experiencia en climatización y energía solar.</p>
                 </div>
             </div>
         </div>
@@ -826,12 +845,13 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contacto</h2>
-                <p>¿Listo para mejorar tu climatización?</p>
+                <p>¿Listo para mejorar tu climatización y energía?</p>
                 <p>Contáctanos por cualquiera de nuestros canales. Estamos disponibles para atenderte y brindarte la mejor solución para tus necesidades.</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-method">                        <i class="fab fa-whatsapp"></i>
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
                         <div>
                             <h3>WhatsApp</h3>
                             <a href="https://wa.me/5354018202" target="_blank" rel="noopener noreferrer">+53 54018202</a><br>
@@ -860,6 +880,13 @@
                             <a href="https://www.instagram.com/lamilc22/" target="_blank" rel="noopener noreferrer">@lamilc22</a>
                         </div>
                     </div>
+                    <!-- Nuevo método de contacto -->                    <div class="contact-method">
+                        <i class="fab fa-facebook"></i>
+                        <div>
+                            <h3>Facebook</h3>
+                            <a href="https://www.facebook.com/lamilc.climatizacion" target="_blank" rel="noopener noreferrer">facebook.com/lamilc.climatizacion</a>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h3>Solicita tu presupuesto</h3>
@@ -876,11 +903,13 @@
                             <option value="carga_gas">Carga de Gas</option>
                             <option value="cambio_lugar">Cambio de Lugar</option>
                             <option value="instalacion_electrica">Instalación Eléctrica</option>
+                            <option value="paneles_solares">Paneles Solares</option> <!-- Opción nueva -->
                         </select>
                         <textarea name="mensaje" placeholder="Mensaje" aria-label="Mensaje"></textarea>
                         <button type="submit" class="btn btn-hero-blue">Enviar Solicitud</button>
                     </form>
-                </div>            </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
@@ -890,7 +919,7 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>LamilC</h3>
-                <p>Soluciones profesionales en climatización. Tu confort es nuestra prioridad. Servicio garantizado y de calidad.</p>
+                <p>Soluciones profesionales en climatización y energía solar. Climatizando tu vida. Servicio garantizado y de calidad.</p>
             </div>
             <div class="footer-column">
                 <h3>Servicios</h3>
@@ -899,8 +928,8 @@
                     <li><a href="#servicios">Mantenimiento</a></li>
                     <li><a href="#servicios">Montaje</a></li>
                     <li><a href="#servicios">Carga de Gas</a></li>
-                    <li><a href="#servicios">Más Servicios</a></li>
-                </ul>
+                    <li><a href="#servicios">Paneles Solares</a></li> <!-- Enlace nuevo -->
+                    <li><a href="#servicios">Más Servicios</a></li>                </ul>
             </div>
             <div class="footer-column">
                 <h3>Contacto</h3>
@@ -911,6 +940,8 @@
                     <li><a href="https://t.me/+5354740778" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> +53 54740778</a></li>
                     <li><a href="mailto:pblancob92@gmail.com"><i class="far fa-envelope"></i> pblancob92@gmail.com</a></li>
                     <li><a href="https://www.instagram.com/lamilc22/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> @lamilc22</a></li>
+                    <!-- Enlace nuevo en footer -->
+                    <li><a href="https://www.facebook.com/lamilc.climatizacion" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> facebook.com/lamilc.climatizacion</a></li>
                 </ul>
             </div>
         </div>
@@ -929,7 +960,8 @@
         navLinks.classList.toggle('active');
         const icon = mobileMenuBtn.querySelector('i');
         icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');    });
+        icon.classList.toggle('fa-times');
+    });
 
     // Cerrar menú al hacer clic en un enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
@@ -946,8 +978,7 @@
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        } else {            header.classList.remove('scrolled');
         }
     });
 
@@ -996,8 +1027,7 @@
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
-                });
-            }
+                });            }
         });
     });
 </script>
